@@ -7,19 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //Declaração do atributos e lista.
+}
 
-  alunos=null;
-  nome=null;
-  dataNascimento=null;
-  sexo=null;
-  cpf=null;
-  email=null;
-  telefone=null;
-  endereco=null;
-  cep=null;
-  cidade=null;
-  uf=[
+class Cadastro{
+  //Declaração do atributos e lista.
+  private alunos=null;
+  private nome=null;
+  private dataNascimento=null;
+  private sexo=null;
+  private cpf=null;
+  private email=null;
+  private endereco=null;
+  private telefone=null;
+  private cep=null;
+  private cidade=null;
+  private uf=[
     { uf: 'AC', nome: 'Acre' },
     { uf: 'AL', nome: 'Alagoas' },
     { uf: 'AP', nome: 'Amapá' },
@@ -47,47 +49,49 @@ export class AppComponent {
     { uf: 'SP', nome: 'São Paulo' },
     { uf: 'SE', nome: 'Sergipe' },
     { uf: 'TO', nome: 'Tocantins' }];
-  turmas=[];
-
-
-
-
-//Método salvar, adicionar os alunos na lista
-//atributos null, limpar os campos de input.
-salvar(){
-  this.alunos.push({
-    nome: this.nome,
-    dataNascimento: this.dataNascimento,
-    sexo: this.sexo,
-    cpf: this.cpf,
-    email: this.email,
-    telefone: this.telefone,
-    endereco: this.endereco,
-    cep: this.cep,
-    uf: this.uf,
-    cidade: this.cidade
-
-  });
-  this.nome = null;
-  this.dataNascimento = null;
-  this.sexo = null;
-  this.cpf = null;
-  this.email = null;
-  this.telefone = null;
-  this.endereco = null;
-  this.cep = null;
-  this.cidade = null;
-  this.uf = null;
-} 
-
-
-
-//Método splice, trata a exclusão a partir do
-//índice do aray do objeto e segundo parâmetro indica a qtd de elementos excluído é 1.
-//limpar(pessoa){
- //  const i = this.pessoas.indexOf(pessoa);
-  // this.pessoas.splice(i, 1);
-  // this.atualizarEstatisticas();
-//}  
-
-}
+    private turmas=[
+    {numero: 14, nome:'LpWeb'}
+  ];
+  
+  constructor (nome: String, data: Date, sexo: boolean, cpf: Number, email: String,
+     endereco: String, telefone: Number, cep: String, cidade: String ){
+    this.nome = this.nome;
+    this.dataNascimento = this.dataNascimento;
+    this.sexo = this.sexo;
+    this.cpf = this.cpf;
+    this.email = this.email;
+    this.endereco = this.endereco;
+    this.telefone = this.telefone;
+    this.cep = this.cep;
+    this.cidade = this.cidade;
+  }
+  
+  //Método salvar, adicionar os alunos na lista
+  //atributos null, limpar os campos de input.
+    salvar(){
+      this.alunos.push({
+        nome: this.nome,
+        dataNascimento: this.dataNascimento,
+        sexo: this.sexo,
+        cpf: this.cpf,
+        email: this.email,
+        telefone: this.telefone,
+        endereco: this.endereco,
+        cep: this.cep,
+        uf: this.uf,
+        cidade: this.cidade
+    
+      });
+      this.nome = null;
+      this.dataNascimento = null;
+      this.sexo = null;
+      this.cpf = null;
+      this.email = null;
+      this.telefone = null;
+      this.endereco = null;
+      this.cep = null;
+      this.cidade = null;
+      this.uf = null;
+    } 
+  
+  }
