@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,8 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //Declaração do atributos e lista.
 
+  alunos=null;
   nome=null;
-  dataDeNasciemnto=null;
+  dataNascimento=null;
   sexo=null;
   cpf=null;
   email=null;
@@ -44,18 +46,18 @@ export class AppComponent {
     { uf: 'SC', nome: 'Santa Catarina' },
     { uf: 'SP', nome: 'São Paulo' },
     { uf: 'SE', nome: 'Sergipe' },
-    { uf: 'TO', nome: 'Tocantins' }
-];
-
+    { uf: 'TO', nome: 'Tocantins' }];
   turmas=[];
-  alunos=[];
+
+
+
 
 //Método salvar, adicionar os alunos na lista
 //atributos null, limpar os campos de input.
 salvar(){
   this.alunos.push({
     nome: this.nome,
-    dataDeNasciemnto: this.dataDeNasciemnto,
+    dataNascimento: this.dataNascimento,
     sexo: this.sexo,
     cpf: this.cpf,
     email: this.email,
@@ -67,7 +69,7 @@ salvar(){
 
   });
   this.nome = null;
-  this.dataDeNasciemnto = null;
+  this.dataNascimento = null;
   this.sexo = null;
   this.cpf = null;
   this.email = null;
