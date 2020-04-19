@@ -23,18 +23,17 @@ export class AppComponent {
     {numero: 14, nome:'LpWeb'}];
    alunos=null;
   
-  constructor (nome: String, data: Date, sexo: Boolean, cpf: Number, email: String,
-     endereco: String, telefone: Number, cep: String, cidade: String, uf: String ){
-    this.nome = this.nome;
-    this.dataNascimento = this.dataNascimento;
-    this.sexo = this.sexo;
-    this.cpf = this.cpf;
-    this.email = this.email;
-    this.endereco = this.endereco;
-    this.telefone = this.telefone;
-    this.cep = this.cep;
-    this.cidade = this.cidade;
-    this.uf = this.uf;
+  constructor (){
+      this.nome = this.nome;
+      this.dataNascimento = this.dataNascimento;
+      this.sexo = this.sexo;
+      this.cpf = this.cpf;
+      this.email = this.email;
+      this.endereco = this.endereco;
+      this.telefone = this.telefone;
+      this.cep = this.cep;
+      this.cidade = this.cidade;
+      this.uf = this.uf;
   }
   
   //Método salvar, adicionar os alunos na lista
