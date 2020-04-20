@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //Declaração do atributos e lista.
-  
+  //Declaração do atributos e listas.
    nome=null;
    dataNascimento=null;
    sexo=null;
@@ -19,9 +18,10 @@ export class AppComponent {
    cep=null;
    cidade=null;
    uf=null;
-   turmas=[
-    {numero: 14, nome:'LpWeb'}];
-   alunos=null;
+   numeroTurma=null;
+   nomeTurma=null;
+   turmas=[];
+   alunos=[];
   
   constructor (){
       this.nome = this.nome;
@@ -50,18 +50,8 @@ export class AppComponent {
         cep: this.cep,
         uf: this.uf,
         cidade: this.cidade
-    
+        
       });
-      this.nome = null;
-      this.dataNascimento = null;
-      this.sexo = null;
-      this.cpf = null;
-      this.email = null;
-      this.telefone = null;
-      this.endereco = null;
-      this.cep = null;
-      this.cidade = null;
-      this.uf = null;
     } 
 
 }
